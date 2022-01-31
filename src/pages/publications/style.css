@@ -1,0 +1,71 @@
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > section {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+section > header:first-child {
+  margin: initial;
+  width: 25vw;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(251, 209, 63);
+  border-radius: 1vh 1vh 0 0;
+}
+section > article {
+  width: 100%;
+  height: 60vh;
+  background-color: rgb(255, 231, 146);
+  border-radius: 0 1vh 1vh 1vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow-y: auto;
+  padding: 4%;
+  gap: 1.8vh;
+}
+section > article > h2 {
+  text-align: center;
+}
+section:first-child > article > div {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+section:first-child > article > div > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section:last-child {
+  margin: 4vh 0;
+}
+@media (min-width: 1024px) {
+  main > section {
+    max-width: 70vw;
+    padding: initial;
+  }
+  section > header:first-child {
+    width: 15vw;
+    height: 5vh;
+  }
+  section > article {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2%;
+    gap: 3vh;
+  }
+  section:last-child {
+    margin: 8vh 0;
+  }
+}

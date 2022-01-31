@@ -1,0 +1,158 @@
+:root {
+  font-size: 10px;
+  --cor-padrao: rgb(43, 179, 253);
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-padrao);
+  font-family: "Fira Code", monospace;
+}
+h1 {
+  font-family: "Antonio", sans-serif;
+  font-size: clamp(1.2rem, 5.3vw, 7vh);
+}
+h2 {
+  font-family: "Antonio", sans-serif;
+  font-size: clamp(0.7rem, 3.4vw, 1.9rem);
+}
+p,
+a,
+input,
+span {
+  font-size: clamp(0.6rem, 2.8vw, 1.6rem);
+}
+img {
+  width: 100%;
+}
+body > header:first-child {
+  margin-bottom: 4vh;
+}
+header > nav {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2.5rem 2rem rgba(0, 0, 0, 0.2);
+  padding: 0 8%;
+}
+header > nav > button {
+  background: none;
+}
+header > nav > div {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  z-index: 1;
+  background-color: var(--cor-padrao);
+}
+header > nav > div > a {
+  width: 80%;
+  font-family: "Antonio", sans-serif;
+  font-size: clamp(0.7rem, 3.4vw, 1.9rem);
+  color: rgba(0, 0, 0);
+  padding: 1rem 0;
+  text-align: center;
+  text-decoration: none;
+}
+/* main {
+  position: relative;
+  z-index: 0;
+} */
+.selecionado {
+  background: rgba(0, 0, 0, 0.25);
+}
+/* Rodapé */
+.fa-github {
+  color: rgb(23, 21, 21);
+}
+.fa-youtube {
+  color: rgb(196, 48, 43);
+}
+.fa-instagram {
+  background: linear-gradient(
+    to bottom right,
+    rgb(79, 91, 213),
+    rgb(150, 47, 191),
+    rgb(214, 41, 118),
+    rgb(250, 126, 30),
+    rgb(254, 218, 117)
+  );
+  color: rgb(255, 255, 255, 0.8);
+  border-radius: 25%;
+}
+.fa-facebook {
+  color: rgb(59, 89, 152);
+}
+body > footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background: #5499b4;
+}
+body > footer > img {
+  background: var(--cor-padrao);
+}
+body > footer > div {
+  width: 80%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer > div > div.redes-sociais {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+footer > div > div.redes-sociais > a {
+  margin: 0 1vw;
+}
+body > footer > div > p {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: clamp(1.9rem, 2vw, 3.1rem);
+  }
+  h2 {
+    font-size: clamp(1.2rem, 1.2vw, 1.9rem);
+  }
+  p,
+  a,
+  input,
+  span {
+    font-size: clamp(0.7rem, 0.75vw, 1.9rem);
+  }
+  header > nav > div {
+    width: 30%;
+    left: 70%;
+    border-radius: 0 0 0 1rem;
+  }
+  header > nav > div.menu > a {
+    font-size: clamp(var(--antonio-pequena), 2vw, var(--antonio-grande));
+  }
+  footer > div > div.redes-sociais {
+    width: 15%;
+  }
+}

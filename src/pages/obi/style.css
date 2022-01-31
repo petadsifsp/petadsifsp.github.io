@@ -1,0 +1,121 @@
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8%;
+}
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section > article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5vh;
+}
+section:last-child > article {
+  padding: 2%;
+}
+section:first-child > article > div:first-child {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 3rem;
+  height: 0;
+  overflow: hidden;
+}
+section > article > a > img {
+  width: 100%;
+  height: auto;
+}
+section > article > div:first-child > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+div.description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+  padding: 0 2%;
+}
+div.description > h1 {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /** número de linhas que você quer exibir */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.description > div {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 1vh;
+}
+div.description > div > div {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+div.description > div > div > p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /** número de linhas que você quer exibir */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.description > div > a {
+  color: rgb(0, 0, 0);
+}
+div.description > div > a > p {
+  display: none;
+}
+@media (min-width: 1024px) {
+  section:first-child {
+    width: 50%;
+    margin-bottom: 8vh;
+  }
+  section:last-child > article {
+    flex-direction: initial;
+    padding: 0.5%;
+  }
+  section:last-child > article > div:first-child {
+    width: 50%;
+    position: relative;
+    padding-bottom: 16.875%;
+    padding-top: 3rem;
+    height: 0;
+    overflow: hidden;
+  }
+  section > article > a {
+    width: 60%;
+  }
+  section > article > a > img {
+    width: 100%;
+    height: auto;
+  }
+  section:last-child > article > div.description > div {
+    height: 75%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  div.description > div > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  div.description > div > a > p {
+    display: initial;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+  }
+}

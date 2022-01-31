@@ -1,0 +1,100 @@
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > section {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../../../assets/xadrez-jogo.svg);
+  background-size: cover;
+  border-radius: 0 1vh 1vh 1vh;
+}
+main > section > article {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 1vh 1vh 0 1vh;
+  padding: 4%;
+  color: rgb(255, 255, 255);
+}
+section > article > h2,
+section > article > p,
+section > article > a {
+  margin-bottom: 1vh;
+  font-weight: 700;
+}
+section > article > h2 {
+  text-align: end;
+}
+section > article > p > span {
+  font-weight: 300;
+}
+section > article > p:first-of-type > span {
+  color: rgb(255, 215, 0);
+  font-style: italic;
+}
+section > article > p.descricao {
+  height: 30vh;
+  overflow-y: auto;
+}
+section > article > a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  margin-top: 1.2vh;
+  text-decoration: none;
+  font-style: italic;
+}
+section > article > a > i.fa-github {
+  color: rgb(255, 255, 255);
+  margin-right: 3vw;
+}
+section > article > a > span {
+  text-decoration: underline;
+}
+main > hr {
+  width: 80%;
+  height: 0.1vh;
+  background-color: none;
+  border-bottom: 0.15rem dashed #000;
+  margin: 3vh 0;
+}
+section:last-child {
+  background: url("../../../assets/js-jogo.svg");
+  background-size: cover;
+  margin-bottom: 4vh;
+}
+@media (min-width: 1024px) {
+  main > section {
+    width: 60%;
+    min-height: 70vh;
+    border-radius: 0 1vw 1vw 1vw;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 4vh 2vw;
+  }
+  main > section > article {
+    width: 70%;
+    max-height: 60%;
+    border-radius: 1vw 1vw 0 1vw;
+    padding: 2%;
+  }
+  section > article > a > i.fa-github {
+    color: rgb(255, 255, 255);
+    margin-right: 1vw;
+  }
+  main > hr {
+    width: 70%;
+    height: 0.1vh;
+    background-color: none;
+    border-bottom: 0.2rem dashed rgb(0, 0, 0);
+    margin: 3vh 0;
+  }
+}
