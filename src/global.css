@@ -1,6 +1,6 @@
 :root {
   font-size: 10px;
-  --cor-padrao: #000;
+  --cor-padrao: rgb(43, 179, 253);
 }
 ::-webkit-scrollbar {
   width: 0;
